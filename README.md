@@ -2,7 +2,9 @@
 
 A portfolio of software engineering projects across full-stack web development, backend APIs, SQL databases, fintech-style workflows, systems programming and game development.
 
-## Featured Project: FX Multi-Currency Wallet & Currency Conversion Platform
+## Featured Full-Stack / Fintech Projects
+
+## 1. FX Multi-Currency Wallet & Currency Conversion Platform
 
 **Project folder:** [`fx-wallet-platform/`](./fx-wallet-platform)
 
@@ -40,17 +42,8 @@ npm run seed --workspace server
 npm run dev
 ```
 
-Frontend:
-
-```text
-http://localhost:5173
-```
-
-Backend health check:
-
-```text
-http://localhost:4000/api/health
-```
+Frontend: `http://localhost:5173`  
+Backend health check: `http://localhost:4000/api/health`
 
 Demo login:
 
@@ -67,6 +60,79 @@ Role: ADMIN
 - FX quotes expire after a fixed time window to model real pricing behaviour.
 - Admin reconciliation and audit logs help support teams investigate transaction issues.
 - The provider-adapter structure keeps external payment-provider logic separate from internal wallet logic.
+
+---
+
+## 2. FX Operations Admin Dashboard & Reconciliation Tool
+
+**Project folder:** [`fx-operations-dashboard/`](./fx-operations-dashboard)
+
+A full-stack internal operations dashboard for reviewing simulated FX transactions, filtering payment states, identifying exceptions, adding support notes and exporting transaction reports.
+
+### Main Features
+
+- Transaction search by customer, transaction ID, status, currency pair and risk flag
+- Operations summary cards for completed, pending, failed and review-required transfers
+- Exception report for payments needing manual review
+- Support note workflow
+- CSV export endpoint
+- React dashboard designed for non-technical operations users
+
+### Run Locally
+
+```bash
+cd fx-operations-dashboard
+npm install
+npm run dev
+```
+
+Frontend: `http://localhost:5174`  
+Backend health check: `http://localhost:4100/api/health`
+
+---
+
+## 3. Secure Customer Onboarding & Profile Management Portal
+
+**Project folder:** [`secure-customer-onboarding-portal/`](./secure-customer-onboarding-portal)
+
+A full-stack customer onboarding portal for profile submission, backend validation, admin review decisions, account status changes and audit-style status history.
+
+### Main Features
+
+- Customer and admin demo login
+- Customer profile form with validation
+- Account status display
+- Admin review queue
+- Approve, reject or request review workflow
+- Status history for traceability
+- Separation between customer actions and admin actions
+
+### Run Locally
+
+```bash
+cd secure-customer-onboarding-portal
+npm install
+npm run dev
+```
+
+Frontend: `http://localhost:5175`  
+Backend health check: `http://localhost:4200/api/health`
+
+Demo customer:
+
+```text
+Email: customer@example.com
+Password: demo123
+```
+
+Demo admin:
+
+```text
+Email: admin@example.com
+Password: admin123
+```
+
+---
 
 ## Other Projects
 
@@ -96,8 +162,8 @@ A lightweight image manipulation project with filters such as invert, grayscale,
 - Node.js and Express API design
 - REST APIs
 - MySQL schema design
-- SQL ledger and reporting queries
-- JWT authentication
+- SQL ledger and reporting query concepts
+- JWT/session-style authentication concepts
 - Role-based access concepts
 - Audit logging
 - Reconciliation workflows
