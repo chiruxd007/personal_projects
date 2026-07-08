@@ -1,120 +1,178 @@
-# C++ Systems & Media Engineering Projects
+# Personal Projects Portfolio
 
-This repository contains a collection of C++ projects focused on **systems programming, concurrency, memory management, and media processing**.
+A portfolio of software engineering projects across full-stack web development, backend APIs, SQL databases, fintech-style workflows, systems programming and game development.
 
-I created this GitHub account to host a clean portfolio of projects specifically related to **low-level C++ development and media software engineering**, as part of my application to **Blackmagic Design's Graduate Software Engineering Program**.
+## Featured Full-Stack / Fintech Projects
 
-The goal of this repository is to demonstrate practical understanding of:
+## 1. FX Multi-Currency Wallet & Currency Conversion Platform
 
-- memory management
-- multithreading
-- media file parsing
-- image processing
-- pipeline architectures
-- performance-oriented C++ design
+**Project folder:** [`fx-wallet-platform/`](./fx-wallet-platform)
 
-These projects were implemented from scratch without relying on heavy external frameworks to highlight core C++ and systems programming concepts.
+A full-stack fintech portfolio project built with React, Node.js, Express and MySQL. It models the core workflow of an international payments product: customer wallets, FX quotes, quote expiry, transfer confirmation, debit/credit ledger entries, transaction history, audit logs and admin reconciliation.
 
----
+### Tech Stack
 
-# Projects
+- Frontend: React, Vite, JavaScript, CSS
+- Backend: Node.js, Express.js, REST APIs
+- Database: MySQL 8
+- Security concepts: JWT authentication, role-based admin routes, validation, audit logs
+- Tooling: Git, GitHub, Docker Compose, npm workspaces
 
-## 1. Video File Metadata & Frame Parser
-Parses container metadata from video files and extracts structural information.
+### Main Features
 
-**Concepts demonstrated**
-- binary file parsing
-- container format structure
-- byte-level data processing
-- media file architecture
+- Customer login with JWT authentication
+- Multi-currency wallet balances
+- Wallet creation and demo wallet funding
+- FX quote generation with rate, fee, converted amount and expiry time
+- Quote confirmation flow
+- Ledger-based wallet accounting using immutable debit and credit entries
+- Transaction history
+- Admin reconciliation dashboard
+- Audit logs for operational review
+- Simulated provider-adapter pattern for future payment API integration
 
----
+### Run Locally
 
-## 2. Custom Memory Allocator
-A simplified implementation of a heap memory allocator supporting:
+```bash
+cd fx-wallet-platform
+docker compose up -d
+npm install
+cp .env.example .env
+npm run seed --workspace server
+npm run dev
+```
 
-- `malloc`
-- `free`
-- `calloc`
-- `realloc`
+Frontend: `http://localhost:5173`  
+Backend health check: `http://localhost:4000/api/health`
 
-**Concepts demonstrated**
-- free list allocator
-- block splitting
-- block coalescing
-- heap layout management
+Demo login:
 
----
+```text
+Email: chirantan@example.com
+Password: demo123
+Role: ADMIN
+```
 
-## 3. Multithreaded Thread Pool
-A thread pool implementation supporting concurrent task execution.
+### Interview Talking Points
 
-**Concepts demonstrated**
-
-- worker threads
-- mutex synchronization
-- condition variables
-- producer-consumer task queues
-
----
-
-## 4. Video Frame Processing Pipeline
-A multithreaded pipeline simulating a real-time video processing workflow.
-
-Stages include:
-
-- frame generation
-- frame processing
-- frame output
-
-**Concepts demonstrated**
-
-- pipeline architecture
-- inter-thread communication
-- task scheduling
-- media processing workflow
+- Wallet balances are calculated from ledger entries instead of being overwritten directly.
+- Quote confirmation uses a database transaction so the source debit and destination credit stay consistent.
+- FX quotes expire after a fixed time window to model real pricing behaviour.
+- Admin reconciliation and audit logs help support teams investigate transaction issues.
+- The provider-adapter structure keeps external payment-provider logic separate from internal wallet logic.
 
 ---
 
-## 5. Mini Image Editor
-A lightweight image processing tool supporting several filters.
+## 2. FX Operations Admin Dashboard & Reconciliation Tool
 
-Features:
+**Project folder:** [`fx-operations-dashboard/`](./fx-operations-dashboard)
 
-- invert
-- grayscale
-- brightness adjustment
-- blur
-- horizontal flip
+A full-stack internal operations dashboard for reviewing simulated FX transactions, filtering payment states, identifying exceptions, adding support notes and exporting transaction reports.
 
-Uses `stb_image` for image decoding and encoding.
+### Main Features
 
-**Concepts demonstrated**
+- Transaction search by customer, transaction ID, status, currency pair and risk flag
+- Operations summary cards for completed, pending, failed and review-required transfers
+- Exception report for payments needing manual review
+- Support note workflow
+- CSV export endpoint
+- React dashboard designed for non-technical operations users
 
-- pixel-level manipulation
-- image filtering
-- graphics data structures
+### Run Locally
 
----
+```bash
+cd fx-operations-dashboard
+npm install
+npm run dev
+```
 
-# Technologies Used
-
-- C++
-- STL
-- Multithreading (`std::thread`)
-- Mutex / condition variables
-- Low-level memory management
-- Image processing
+Frontend: `http://localhost:5174`  
+Backend health check: `http://localhost:4100/api/health`
 
 ---
 
-# Motivation
+## 3. Secure Customer Onboarding & Profile Management Portal
 
-These projects were built to strengthen my understanding of **performance-sensitive C++ systems**, particularly in areas relevant to **video, graphics, and media software development**.
+**Project folder:** [`secure-customer-onboarding-portal/`](./secure-customer-onboarding-portal)
+
+A full-stack customer onboarding portal for profile submission, backend validation, admin review decisions, account status changes and audit-style status history.
+
+### Main Features
+
+- Customer and admin demo login
+- Customer profile form with validation
+- Account status display
+- Admin review queue
+- Approve, reject or request review workflow
+- Status history for traceability
+- Separation between customer actions and admin actions
+
+### Run Locally
+
+```bash
+cd secure-customer-onboarding-portal
+npm install
+npm run dev
+```
+
+Frontend: `http://localhost:5175`  
+Backend health check: `http://localhost:4200/api/health`
+
+Demo customer:
+
+```text
+Email: customer@example.com
+Password: demo123
+```
+
+Demo admin:
+
+```text
+Email: admin@example.com
+Password: admin123
+```
 
 ---
 
-# Author
+## Other Projects
+
+### C++ Media Metadata Parser
+
+A low-level parser for reading media headers and extracting structured metadata using binary file I/O, byte-level parsing and error handling.
+
+### Custom Memory Allocator
+
+A simplified heap allocator demonstrating manual memory management, free lists, block splitting and block coalescing.
+
+### Multithreaded Thread Pool
+
+A concurrent task execution project demonstrating worker threads, mutex synchronization, condition variables and producer-consumer queues.
+
+### Video Frame Processing Pipeline
+
+A multithreaded staged pipeline simulating media processing workflows and inter-thread communication.
+
+### Mini Image Editor
+
+A lightweight image manipulation project with filters such as invert, grayscale, brightness adjustment, blur and horizontal flip.
+
+## Skills Demonstrated
+
+- React frontend development
+- Node.js and Express API design
+- REST APIs
+- MySQL schema design
+- SQL ledger and reporting query concepts
+- JWT/session-style authentication concepts
+- Role-based access concepts
+- Audit logging
+- Reconciliation workflows
+- Git/GitHub workflow
+- Docker-based local development
+- C++ systems programming
+- Debugging and testing mindset
+
+## Author
 
 Chirantan Kundu  
-B.Sc. — University of Melbourne
+B.Sc. Computer and Software Systems — University of Melbourne
