@@ -1,0 +1,20 @@
+{
+  "name": "fx-operations-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "vite client --host 0.0.0.0 --port 5174"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "concurrently": "^9.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "vite": "^5.4.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
