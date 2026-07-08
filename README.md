@@ -1,120 +1,112 @@
-# C++ Systems & Media Engineering Projects
+# Personal Projects Portfolio
 
-This repository contains a collection of C++ projects focused on **systems programming, concurrency, memory management, and media processing**.
+A portfolio of software engineering projects across full-stack web development, backend APIs, SQL databases, fintech-style workflows, systems programming and game development.
 
-I created this GitHub account to host a clean portfolio of projects specifically related to **low-level C++ development and media software engineering**, as part of my application to **Blackmagic Design's Graduate Software Engineering Program**.
+## Featured Project: FX Multi-Currency Wallet & Currency Conversion Platform
 
-The goal of this repository is to demonstrate practical understanding of:
+**Project folder:** [`fx-wallet-platform/`](./fx-wallet-platform)
 
-- memory management
-- multithreading
-- media file parsing
-- image processing
-- pipeline architectures
-- performance-oriented C++ design
+A full-stack fintech portfolio project built with React, Node.js, Express and MySQL. It models the core workflow of an international payments product: customer wallets, FX quotes, quote expiry, transfer confirmation, debit/credit ledger entries, transaction history, audit logs and admin reconciliation.
 
-These projects were implemented from scratch without relying on heavy external frameworks to highlight core C++ and systems programming concepts.
+### Tech Stack
 
----
+- Frontend: React, Vite, JavaScript, CSS
+- Backend: Node.js, Express.js, REST APIs
+- Database: MySQL 8
+- Security concepts: JWT authentication, role-based admin routes, validation, audit logs
+- Tooling: Git, GitHub, Docker Compose, npm workspaces
 
-# Projects
+### Main Features
 
-## 1. Video File Metadata & Frame Parser
-Parses container metadata from video files and extracts structural information.
+- Customer login with JWT authentication
+- Multi-currency wallet balances
+- Wallet creation and demo wallet funding
+- FX quote generation with rate, fee, converted amount and expiry time
+- Quote confirmation flow
+- Ledger-based wallet accounting using immutable debit and credit entries
+- Transaction history
+- Admin reconciliation dashboard
+- Audit logs for operational review
+- Simulated provider-adapter pattern for future payment API integration
 
-**Concepts demonstrated**
-- binary file parsing
-- container format structure
-- byte-level data processing
-- media file architecture
+### Run Locally
 
----
+```bash
+cd fx-wallet-platform
+docker compose up -d
+npm install
+cp .env.example .env
+npm run seed --workspace server
+npm run dev
+```
 
-## 2. Custom Memory Allocator
-A simplified implementation of a heap memory allocator supporting:
+Frontend:
 
-- `malloc`
-- `free`
-- `calloc`
-- `realloc`
+```text
+http://localhost:5173
+```
 
-**Concepts demonstrated**
-- free list allocator
-- block splitting
-- block coalescing
-- heap layout management
+Backend health check:
 
----
+```text
+http://localhost:4000/api/health
+```
 
-## 3. Multithreaded Thread Pool
-A thread pool implementation supporting concurrent task execution.
+Demo login:
 
-**Concepts demonstrated**
+```text
+Email: chirantan@example.com
+Password: demo123
+Role: ADMIN
+```
 
-- worker threads
-- mutex synchronization
-- condition variables
-- producer-consumer task queues
+### Interview Talking Points
 
----
+- Wallet balances are calculated from ledger entries instead of being overwritten directly.
+- Quote confirmation uses a database transaction so the source debit and destination credit stay consistent.
+- FX quotes expire after a fixed time window to model real pricing behaviour.
+- Admin reconciliation and audit logs help support teams investigate transaction issues.
+- The provider-adapter structure keeps external payment-provider logic separate from internal wallet logic.
 
-## 4. Video Frame Processing Pipeline
-A multithreaded pipeline simulating a real-time video processing workflow.
+## Other Projects
 
-Stages include:
+### C++ Media Metadata Parser
 
-- frame generation
-- frame processing
-- frame output
+A low-level parser for reading media headers and extracting structured metadata using binary file I/O, byte-level parsing and error handling.
 
-**Concepts demonstrated**
+### Custom Memory Allocator
 
-- pipeline architecture
-- inter-thread communication
-- task scheduling
-- media processing workflow
+A simplified heap allocator demonstrating manual memory management, free lists, block splitting and block coalescing.
 
----
+### Multithreaded Thread Pool
 
-## 5. Mini Image Editor
-A lightweight image processing tool supporting several filters.
+A concurrent task execution project demonstrating worker threads, mutex synchronization, condition variables and producer-consumer queues.
 
-Features:
+### Video Frame Processing Pipeline
 
-- invert
-- grayscale
-- brightness adjustment
-- blur
-- horizontal flip
+A multithreaded staged pipeline simulating media processing workflows and inter-thread communication.
 
-Uses `stb_image` for image decoding and encoding.
+### Mini Image Editor
 
-**Concepts demonstrated**
+A lightweight image manipulation project with filters such as invert, grayscale, brightness adjustment, blur and horizontal flip.
 
-- pixel-level manipulation
-- image filtering
-- graphics data structures
+## Skills Demonstrated
 
----
+- React frontend development
+- Node.js and Express API design
+- REST APIs
+- MySQL schema design
+- SQL ledger and reporting queries
+- JWT authentication
+- Role-based access concepts
+- Audit logging
+- Reconciliation workflows
+- Git/GitHub workflow
+- Docker-based local development
+- C++ systems programming
+- Debugging and testing mindset
 
-# Technologies Used
-
-- C++
-- STL
-- Multithreading (`std::thread`)
-- Mutex / condition variables
-- Low-level memory management
-- Image processing
-
----
-
-# Motivation
-
-These projects were built to strengthen my understanding of **performance-sensitive C++ systems**, particularly in areas relevant to **video, graphics, and media software development**.
-
----
-
-# Author
+## Author
 
 Chirantan Kundu  
-B.Sc. — University of Melbourne
+B.Sc. Computer and Software Systems — University of Melbourne
