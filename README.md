@@ -1,6 +1,31 @@
 # Personal Projects Portfolio
 
-A portfolio of software engineering and digital marketing projects across full-stack web development, backend APIs, SQL databases, fintech-style workflows, digital content strategy, SEO/GEO, analytics, systems programming and game development.
+A portfolio of software engineering and digital marketing projects across content marketing, social media coordination, localisation, digital reporting, full-stack web development, backend APIs, SQL databases, SEO/GEO, analytics, fintech-style workflows, systems programming and game development.
+
+## Featured Content Marketing Portfolio
+
+## Nintendo Australia Content Marketing Portfolio
+
+**Project folder:** [`nintendo-content-marketing-portfolio/`](./nintendo-content-marketing-portfolio)
+
+An independent application portfolio for a Nintendo Australia Content Marketing Coordinator role. It demonstrates social content calendar coordination, localisation thinking, copywriting by channel, Switch News-style content, weekly owned-channel reporting, moderation judgement and fan/community empathy.
+
+### Main Artefacts
+
+- Forward-planned social content calendar
+- Localised social and Switch News copy samples
+- Weekly digital activity reporting template
+- Community moderation and monitoring approach
+- Zelda campaign story explaining Nintendo brand passion
+
+### Interview Talking Points
+
+- Nintendo content needs originality, flexibility and sincerity while still staying accurate and globally aligned.
+- Strong content coordination means protecting campaign timing, localising carefully and matching copy to each channel.
+- Community monitoring is a feedback loop: fan comments show what people love, misunderstand or want clarified.
+- My technical background helps with digital reporting, content organisation, scheduling systems and performance analysis.
+
+---
 
 ## Featured Digital Marketing / SEO / AI Visibility Portfolio
 
@@ -184,6 +209,11 @@ A lightweight image manipulation project with filters such as invert, grayscale,
 
 ## Skills Demonstrated
 
+- Content marketing coordination
+- Social content calendar planning
+- Localisation and copy adaptation
+- Community monitoring and moderation judgement
+- Weekly digital activity reporting
 - Digital content strategy
 - SEO and generative engine optimisation concepts
 - GA4 content measurement planning
