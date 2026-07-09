@@ -1,6 +1,32 @@
 # Personal Projects Portfolio
 
-A portfolio of software engineering projects across full-stack web development, backend APIs, SQL databases, fintech-style workflows, systems programming and game development.
+A portfolio of software engineering and digital marketing projects across full-stack web development, backend APIs, SQL databases, fintech-style workflows, digital content strategy, SEO/GEO, analytics, systems programming and game development.
+
+## Featured Digital Marketing / SEO / AI Visibility Portfolio
+
+## Digital Content, SEO & AI Visibility Portfolio
+
+**Project folder:** [`digital-content-seo-portfolio/`](./digital-content-seo-portfolio)
+
+An independent content-strategy portfolio for an energy-retail style digital team. It demonstrates content roadmap planning, SEO/GEO content briefs, blog article samples, GA4 measurement thinking, AI visibility strategy, customer-experience content and conversion/self-service reporting.
+
+### Main Artefacts
+
+- 90-day energy content roadmap for a Living Energy-style blog
+- SEO and GEO content briefs for customer energy topics
+- Customer-friendly blog article samples
+- GA4 event tracking and content measurement framework
+- AI visibility strategy for LLM / answer-engine discovery
+- Stakeholder-friendly reporting structure for marketing, digital, SME and customer teams
+
+### Interview Talking Points
+
+- Content should be measured by customer action and self-service outcomes, not only page views.
+- GEO works best when content is structured, accurate, answerable and supported by authority signals.
+- My technical background helps me understand event tracking, website structure, dashboards and AI discovery.
+- Energy content needs plain English because customers often arrive confused, stressed or comparison-shopping.
+
+---
 
 ## Featured Full-Stack / Fintech Projects
 
@@ -158,6 +184,10 @@ A lightweight image manipulation project with filters such as invert, grayscale,
 
 ## Skills Demonstrated
 
+- Digital content strategy
+- SEO and generative engine optimisation concepts
+- GA4 content measurement planning
+- Customer journey and self-service content thinking
 - React frontend development
 - Node.js and Express API design
 - REST APIs
