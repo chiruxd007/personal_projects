@@ -1,14 +1,18 @@
-name: Test Python AI Projects
+name: Test Python Project Suites
 
 on:
   push:
     paths:
       - "ai-*/**"
-      - ".github/workflows/python-ai-projects.yml"
+      - "mineral-prospectivity-ml/**"
+      - "geoscience-rag-assistant/**"
+      - ".github/workflows/python-project-tests.yml"
   pull_request:
     paths:
       - "ai-*/**"
-      - ".github/workflows/python-ai-projects.yml"
+      - "mineral-prospectivity-ml/**"
+      - "geoscience-rag-assistant/**"
+      - ".github/workflows/python-project-tests.yml"
 
 jobs:
   test:
@@ -16,6 +20,8 @@ jobs:
     strategy:
       matrix:
         project:
+          - mineral-prospectivity-ml
+          - geoscience-rag-assistant
           - ai-resume-job-matcher
           - ai-support-ticket-triage
           - ai-restaurant-recommender
@@ -30,4 +36,4 @@ jobs:
           cache: pip
           cache-dependency-path: ${{ matrix.project }}/requirements.txt
       - run: pip install -r requirements.txt
-      - run: pytest -q
+      - run: PYTHONPATH=. pytest -q
