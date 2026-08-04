@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Smoky Double Smash",
+    "description": "Double beef patties with smoky sauce, pickles and grilled onions",
+    "tags": ["beef", "smoky", "rich", "burger"],
+    "dietary": ["contains_meat"],
+    "spice": 1,
+    "inventory_boost": 0.35
+  },
+  {
+    "name": "Hot Honey Chicken",
+    "description": "Crispy chicken with hot honey, slaw and jalapeno",
+    "tags": ["chicken", "sweet", "spicy", "crispy"],
+    "dietary": ["contains_meat"],
+    "spice": 4,
+    "inventory_boost": 0.55
+  },
+  {
+    "name": "Garden Crunch Burger",
+    "description": "Vegetable patty with lettuce, tomato, pickles and herb sauce",
+    "tags": ["fresh", "crunchy", "vegetarian", "light"],
+    "dietary": ["vegetarian"],
+    "spice": 1,
+    "inventory_boost": 0.95
+  },
+  {
+    "name": "Peri Peri Chicken Bowl",
+    "description": "Grilled chicken, rice, lettuce and tangy peri peri sauce",
+    "tags": ["chicken", "spicy", "high protein", "fresh"],
+    "dietary": ["contains_meat", "gluten_free"],
+    "spice": 3,
+    "inventory_boost": 0.8
+  },
+  {
+    "name": "Mushroom Melt",
+    "description": "Grilled mushrooms, cheese, caramelised onion and garlic sauce",
+    "tags": ["vegetarian", "cheesy", "savory", "burger"],
+    "dietary": ["vegetarian"],
+    "spice": 0,
+    "inventory_boost": 0.4
+  }
+]

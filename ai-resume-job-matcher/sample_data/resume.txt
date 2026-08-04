@@ -1,0 +1,3 @@
+Software engineering graduate experienced with Python, JavaScript, React, Node.js,
+Express, REST APIs, SQL, MySQL, Docker, Git, testing, data structures and algorithms.
+Built full-stack fintech applications and machine learning portfolio projects.

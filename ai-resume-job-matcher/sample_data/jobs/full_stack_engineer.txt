@@ -1,0 +1,2 @@
+Build customer-facing software using JavaScript, React, Node.js, Express, SQL, MySQL,
+REST APIs, Git, Docker, testing and CI/CD practices.

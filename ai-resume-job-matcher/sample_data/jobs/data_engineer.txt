@@ -1,0 +1,2 @@
+Develop data pipelines using Python, SQL, PostgreSQL, AWS and Docker. Experience with
+CI/CD, testing and reliable production systems is required.

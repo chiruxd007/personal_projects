@@ -1,0 +1,25 @@
+text,category
+"I was charged twice for the same transfer",billing
+"The fee on my invoice looks incorrect",billing
+"Please explain why my card payment has an extra charge",billing
+"I need a refund for a duplicated subscription payment",billing
+"My monthly bill is higher than expected",billing
+"The payment amount does not match the receipt",billing
+"I cannot sign in after resetting my password",account_access
+"My verification code never arrives",account_access
+"The app says my account is locked",account_access
+"I lost access to the email used for login",account_access
+"Two factor authentication keeps rejecting my code",account_access
+"My password reset link has expired",account_access
+"The mobile app crashes when I open transaction history",technical
+"The dashboard is showing a blank screen",technical
+"The API returns a 500 error on profile update",technical
+"The website freezes after I upload a document",technical
+"Notifications are not loading on Android",technical
+"The export button downloads an empty CSV",technical
+"My international transfer is still pending",transfer
+"The recipient has not received the money",transfer
+"Why was my bank transfer rejected",transfer
+"The exchange transfer status has not changed",transfer
+"I entered the wrong recipient for a transfer",transfer
+"My completed transfer is missing from history",transfer
