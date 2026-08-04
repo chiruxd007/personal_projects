@@ -4,10 +4,14 @@ on:
   push:
     paths:
       - "ai-*/**"
+      - "mineral-prospectivity-ml/**"
+      - "geoscience-rag-assistant/**"
       - ".github/workflows/python-ai-projects.yml"
   pull_request:
     paths:
       - "ai-*/**"
+      - "mineral-prospectivity-ml/**"
+      - "geoscience-rag-assistant/**"
       - ".github/workflows/python-ai-projects.yml"
 
 jobs:
@@ -16,6 +20,8 @@ jobs:
     strategy:
       matrix:
         project:
+          - mineral-prospectivity-ml
+          - geoscience-rag-assistant
           - ai-resume-job-matcher
           - ai-support-ticket-triage
           - ai-restaurant-recommender
