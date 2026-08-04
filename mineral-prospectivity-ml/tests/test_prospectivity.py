@@ -13,3 +13,11 @@ def test_model_beats_random_baseline_on_synthetic_signal():
     metrics = evaluate(frame, folds=4)
     assert metrics["roc_auc"] > 0.70
     assert metrics["f1"] > 0.50
+
+
+def test_visualisation_pipeline_writes_two_plots(tmp_path):
+    from visualize import create_plots
+
+    paths = create_plots(tmp_path, rows=100)
+    assert len(paths) == 2
+    assert all(path.exists() and path.stat().st_size > 0 for path in paths)
