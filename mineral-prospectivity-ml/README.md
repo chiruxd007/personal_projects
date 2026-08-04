@@ -4,12 +4,13 @@ A portfolio machine-learning project that models mineral prospectivity from a **
 
 ## What it demonstrates
 
-- Python, NumPy, Pandas and scikit-learn
+- Python, NumPy, Pandas, Matplotlib and scikit-learn
 - Missing-value handling and mixed numeric/categorical features
 - Reproducible synthetic data generation with noise and outliers
 - Stratified cross-validation and ROC-AUC, precision, recall and F1 evaluation
 - Class balancing and an interpretable logistic-regression baseline
 - Permutation-based feature importance
+- Reproducible evaluation and feature-importance plots
 - Input validation, CLI output and pytest coverage
 
 ## Run
@@ -33,10 +34,16 @@ Evaluate an input CSV:
 python prospectivity.py --data data/geochemical_samples.csv
 ```
 
+Create evaluation plots:
+
+```bash
+python visualize.py --output-dir reports
+```
+
 ## Test
 
 ```bash
-pytest -q
+PYTHONPATH=. pytest -q
 ```
 
 ## Example result
