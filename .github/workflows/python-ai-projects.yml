@@ -36,4 +36,4 @@ jobs:
           cache: pip
           cache-dependency-path: ${{ matrix.project }}/requirements.txt
       - run: pip install -r requirements.txt
-      - run: pytest -q
+      - run: PYTHONPATH=. pytest -q
