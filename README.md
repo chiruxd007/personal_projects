@@ -1,10 +1,34 @@
-# Personal Projects Portfolio
+# Graduate Full-Stack Developer Portfolio
 
-A focused software engineering portfolio spanning applied AI, full-stack development, backend APIs, SQL databases, fintech workflows, systems programming, concurrency and media processing.
+A software engineering portfolio focused on applied AI, full-stack SaaS development, backend APIs, relational databases, automated testing and maintainable delivery practices.
 
-## Featured AI Projects
+**Current focus:** Graduate and junior full-stack roles involving AI-assisted development, Agile teamwork, SQL/data modelling and the complete software development lifecycle.
 
-### 1. AI Resume-to-Job Matcher
+## Featured Applied AI Projects
+
+### 1. AI Support Ticket Triage
+
+**Project folder:** [`ai-support-ticket-triage/`](./ai-support-ticket-triage)
+
+A supervised text-classification pipeline that routes support tickets into billing, account-access, technical and transfer queues with confidence scores.
+
+- TF-IDF plus multiclass logistic regression
+- Dataset validation and reproducible evaluation
+- Human-review friendly confidence output
+- CLI predictions, pytest coverage and GitHub Actions
+
+### 2. AI Restaurant Menu Recommender
+
+**Project folder:** [`ai-restaurant-recommender/`](./ai-restaurant-recommender)
+
+A content-based recommendation engine combining natural-language preferences with dietary constraints, spice limits and a controlled inventory signal.
+
+- Semantic menu matching with cosine similarity
+- Hard dietary and spice constraints applied before ranking
+- Responsible inventory-aware ranking
+- Automated tests and documented production extensions
+
+### 3. AI Resume-to-Job Matcher
 
 **Project folder:** [`ai-resume-job-matcher/`](./ai-resume-job-matcher)
 
@@ -15,29 +39,7 @@ An explainable NLP tool that ranks job descriptions against a resume using TF-ID
 - CLI and JSON output
 - Automated pytest coverage
 
-### 2. AI Support Ticket Triage
-
-**Project folder:** [`ai-support-ticket-triage/`](./ai-support-ticket-triage)
-
-A supervised text-classification pipeline that routes support tickets into billing, account-access, technical and transfer queues with confidence scores.
-
-- TF-IDF plus multiclass logistic regression
-- Dataset validation and reproducible evaluation
-- Human-review friendly confidence output
-- Automated pytest coverage
-
-### 3. AI Restaurant Menu Recommender
-
-**Project folder:** [`ai-restaurant-recommender/`](./ai-restaurant-recommender)
-
-A content-based recommendation engine that combines natural-language customer preferences with dietary constraints, spice limits and a controlled inventory signal.
-
-- Semantic menu matching with cosine similarity
-- Responsible inventory-aware ranking
-- Dietary and spice safety constraints
-- Automated pytest coverage
-
-## Featured Full-Stack and Fintech Projects
+## Featured Full-Stack SaaS Projects
 
 ### 4. FX Multi-Currency Wallet and Currency Conversion Platform
 
@@ -58,6 +60,17 @@ An internal React and Node.js dashboard for searching transactions, reviewing fa
 **Project folder:** [`secure-customer-onboarding-portal/`](./secure-customer-onboarding-portal)
 
 A full-stack onboarding workflow with customer/admin authentication, validated profile submission, review decisions, account status transitions and audit-style history.
+
+## Engineering Approach
+
+- Break requirements into small, reviewable development tasks
+- Build across frontend, backend, APIs and relational data models
+- Use automated testing and manual workflow checks to verify behaviour
+- Document setup, assumptions, limitations and design decisions
+- Use Git and GitHub Actions to support repeatable delivery
+- Communicate blockers early and improve solutions through feedback
+
+I use ChatGPT for problem decomposition, debugging hypotheses, test planning and documentation, while independently reviewing and testing generated suggestions. See [`docs/ai-assisted-development.md`](./docs/ai-assisted-development.md) for the full verification approach.
 
 ## Systems and Media Engineering Projects
 
@@ -85,13 +98,12 @@ A lightweight image-processing application with invert, grayscale, brightness, b
 
 - Python, JavaScript, React, Node.js, Express and C++
 - Applied machine learning and natural-language processing
-- Recommendation systems and text classification
 - REST API design and full-stack application development
-- MySQL, SQL transactions, ledger concepts and reporting queries
+- MySQL, relational modelling, SQL transactions and reporting queries
 - Authentication, validation, role-based access and audit logging
 - Automated testing, GitHub Actions and reproducible CLI workflows
-- Docker-based development, debugging and maintainable software design
-- Systems programming, memory management and concurrency
+- Agile-style task breakdown, debugging and maintainable software design
+- Docker-based development, systems programming and concurrency
 
 ## Running the AI Projects
 
